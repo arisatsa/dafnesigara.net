@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>köpekle sigara içiyor</title>
+    <style>
+        /* Sayfa genel stil ayarları */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black; /* Arka plan siyah */
+            color: white; /* Yazı rengi beyaz */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        /* Başlık (dafnesigara.net) */
+        h1 {
+            color: #ff0000;
+            font-family: "PT Serif", serif;
+            font-weight: bold;
+            font-style: italic;
+            text-align: center;
+            margin-top: 20px; /* Başlık üstten biraz uzak */
+        }
+
+        /* #3 metni */
+        .subtitle {
+            color: #fff;
+            text-align: center;
+            font-family: "PT Serif", serif;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 32px;
+            margin-top: 10px;
+        }
+
+        /* "önceki" ve "sonraki" yazıları için stil */
+        .navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* İki yazı arasında boşluk */
+            margin-top: 20px;
+        }
+
+        .navigation a {
+            color: orange;
+            text-align: center;
+            font-family: "PT Serif", serif;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 24px;
+            text-decoration: underline;
+        }
+
+        /* Resim (ortada) */
+        .main-image {
+            width: 35%; /* Resmin genişliği sayfada %35 */
+            margin-top: 30px;
+        }
+
+        /* Sayfanın alt kısmında boşluk için */
+        .spacer {
+            height: 50px; /* 50px yüksekliğinde boşluk */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Başlık -->
+    <h1>dafnesigara.net</h1>
+
+    <!-- #3 alt başlık -->
+    <div class="subtitle">#3</div>
+
+    <!-- "önceki" ve "sonraki" yazıları -->
+    <div class="navigation">
+        <a href="page2.html">önceki</a>
+        <a href="page4.html">sonraki</a>
+    </div>
+
+    <!-- Büyük resim -->
+    <img src="https://files.catbox.moe/2zrtb5.jpg" alt="Büyük Resim" class="main-image">
+
+    <!-- Sayfanın en altında boşluk bırak -->
+    <div class="spacer"></div>
+
+</body>
+</html>
