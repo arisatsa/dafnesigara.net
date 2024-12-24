@@ -1,0 +1,26 @@
+<body>
+    <h1>dafnesigara.net</h1>
+    <h2>#1</h2>
+     
+    <a href="2" id="next">sonraki</a>
+    
+    <img src="https://files.catbox.moe/kcbvzw.jpeg" alt="#1">
+    <button id="random-button">rastgele</button>
+  
+  <script>
+    document.addEventListener("keydown", function (event) {
+      if (event.keyCode === 37 && document.getElementById("previous")) {
+        window.location.href = document.getElementById("previous").href;
+      }
+      if (event.keyCode === 39 && document.getElementById("next")) {
+        window.location.href = document.getElementById("next").href;
+      }
+    });
+    const randomButton = document.getElementById("random-button");
+
+    randomButton.addEventListener("click", function () {
+      const randomIdx = Math.floor(Math.random() * 172) + 1;
+      window.location.href = `${randomIdx}`;
+    });
+  </script>
+</body>
