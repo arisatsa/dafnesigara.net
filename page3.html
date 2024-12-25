@@ -61,8 +61,17 @@
 
         /* Resim (ortada) */
         .main-image {
-            width: 35%; /* Resmin genişliği sayfada %35 */
+            width: 35%; /* Varsayılan genişlik %35 */
             margin-top: 30px;
+        }
+
+        /* Mobil uyumluluk */
+        @media (max-width: 768px) {
+            .main-image {
+                width: 90%; /* Mobilde genişlik %90 */
+                max-width: 400px; /* Resmin genişliği maksimum 400px */
+                height: auto; /* Yükseklik otomatik */
+            }
         }
 
         /* Sayfanın alt kısmında boşluk için */
