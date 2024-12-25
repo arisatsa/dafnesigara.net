@@ -5,32 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>karanfilli sigara içiyor</title>
     <style> 
-        /* Sayfa genel stil ayarları */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: black; /* Arka plan siyah */
-            color: white; /* Yazı rengi beyaz */
+            background-color: black;
+            color: white;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
             min-height: 100vh;
             text-align: center;
-            cursor: url('https://www.pngplay.com/wp-content/uploads/2/Lighter-Transparent-Free-PNG.png'), auto; /* Çakmak cursor */
         }
 
-        /* Başlık (dafnesigara.net) */
         h1 {
             color: #ff0000;
             font-family: "PT Serif", serif;
             font-weight: bold;
             font-style: italic;
             text-align: center;
-            margin-top: 20px; /* Başlık üstten biraz uzak */
+            margin-top: 20px;
         }
 
-        /* #1 metni */
         .subtitle {
             color: #fff;
             text-align: center;
@@ -41,7 +37,6 @@
             margin-top: 10px;
         }
 
-        /* "sonraki" yazısı */
         .next-button a {
             color: orange;
             text-align: center;
@@ -54,103 +49,85 @@
             display: inline-block;
         }
 
-        /* Resim (ortada) */
         .main-image {
-            width: 35%; /* Varsayılan genişlik */
+            width: 35%;
             margin-top: 30px;
         }
 
-        /* Oynatıcı container stili */
         .custom-player {
-            background-color: transparent; /* Şeffaf arka plan */
+            background-color: transparent;
             width: 100%;
-            max-width: 300px; /* Oynatıcı boyutu */
+            max-width: 300px;
             padding: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 30px; /* Resimden biraz uzaklaşması için */
+            margin-top: 30px;
         }
 
-        /* GIF boyutu ve görünümü */
         .play-image {
-            cursor: pointer; /* GIF'e tıklanabilir olduğunu belirtir */
-            width: auto; /* GIF'in orijinal genişliğini korur */
-            height: auto; /* GIF'in orijinal yüksekliğini korur */
-            max-width: 100px; /* Küçültme için max-width belirlenir */
-            display: none; /* Başlangıçta tamamen gizler */
-            transition: transform 0.3s ease; /* Animasyonlu büyüme efekti */
+            width: auto;
+            height: auto;
+            max-width: 100px;
+            display: none;
+            transition: transform 0.3s ease;
         }
 
-        /* GIF üzerine gelince biraz büyüme efekti */
         .play-image:hover {
-            transform: scale(1.2); /* %120 büyüme */
+            transform: scale(1.2);
         }
 
-        /* Sayfanın alt kısmında boşluk için */
         .spacer {
-            height: 50px; /* 50px yüksekliğinde boşluk */
+            height: 50px;
         }
 
-        /* Mobil cihazlar için medya sorgusu */
         @media (max-width: 768px) {
             .main-image {
-                width: 80%; /* Mobilde resmin genişliği %80 */
+                width: 80%;
             }
 
             .subtitle {
-                font-size: 32px; /* Mobilde başlık yazısının boyutunu 32px yapalım */
+                font-size: 32px;
             }
 
             .next-button a {
-                font-size: 24px; /* Buton yazısının boyutunu da 24px yapalım */
+                font-size: 24px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Başlık -->
     <h1>dafnesigara.net</h1>
 
-    <!-- #1 alt başlık -->
     <div class="subtitle">#1</div>
 
-    <!-- "sonraki" yazısı -->
     <div class="next-button">
         <a href="page2.html">sonraki</a>
     </div>
 
-    <!-- Büyük resim -->
     <img src="https://files.catbox.moe/kcbvzw.jpeg" alt="Büyük Resim" class="main-image">
 
-    <!-- Müzik çalan animasyonlu buton -->
     <div class="custom-player">
-        <!-- Ses dosyasını buraya ekleyin -->
         <audio id="audio" src="https://files.catbox.moe/7jkdtb.mp3" type="audio/mpeg"></audio>
-        
-        <!-- Tek GIF ile Play/Pause kontrolü -->
-        <img id="play-image" class="play-image" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGh4bXZpZ3FuMjFoaXR3aWQxa2N1NnB4NDRhanJlc2o2ZjZxZnlkNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/9bomcwURgtjIzx7mfi/giphy.gif" alt="Play" onclick="togglePlay()">
+        <img id="play-image" class="play-image" src="https://files.catbox.moe/xul1h6.gif" alt="Play" onclick="togglePlay()">
     </div>
 
-    <!-- Sayfanın en altında boşluk bırak -->
     <div class="spacer"></div>
 
     <script>
-        // Ses oynatıcıyı kontrol etmek için fonksiyon
         function togglePlay() {
             var audio = document.getElementById('audio');
             if (audio.paused) {
-                audio.play();  // Ses dosyasını başlat
+                audio.play();
             } else {
-                audio.pause();  // Ses dosyasını durdur
+                audio.pause();
             }
         }
 
-        // Sayfa tamamen yüklendikten sonra GIF'i göster
         window.onload = function () {
             var image = document.getElementById('play-image');
-            image.style.display = "block"; // Sayfa yüklendikten sonra GIF görünür olur
+            image.style.display = "block";
         };
     </script>
 </body>
