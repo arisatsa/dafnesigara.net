@@ -71,8 +71,8 @@
             height: auto;
             max-width: 100px;
             display: none;
-            transition: transform 0.3s ease;
             cursor: pointer;
+            transition: transform 0.3s ease;
         }
 
         .play-image:hover {
@@ -81,6 +81,22 @@
 
         .spacer {
             height: 50px;
+        }
+
+        .random-link {
+            color: #fff;
+            font-family: "PT Serif", serif;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 24px; /* Aynı boyutla "sonraki" yazısı */
+            text-decoration: underline;
+            margin-top: 30px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .random-link + .spacer {
+            margin-top: 30px;
         }
 
         @media (max-width: 768px) {
@@ -118,6 +134,10 @@
 
     <div class="spacer"></div>
 
+    <div class="random-link" onclick="goRandom()">rastgele</div>
+
+    <div class="spacer"></div>
+
     <script>
         function togglePlay() {
             var audio = document.getElementById('audio');
@@ -148,6 +168,11 @@
             var image = document.getElementById('play-image');
             image.style.display = "block";
         };
+
+        function goRandom() {
+            var randomPage = Math.floor(Math.random() * 5) + 1;
+            window.location.href = randomPage + ".html";
+        }
     </script>
 </body>
 </html>
