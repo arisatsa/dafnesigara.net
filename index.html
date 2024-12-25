@@ -112,7 +112,7 @@
 
     <div class="custom-player">
         <audio id="audio" src="https://files.catbox.moe/7jkdtb.mp3" type="audio/mpeg"></audio>
-        <img id="play-image" class="play-image" src="https://files.catbox.moe/xul1h6.gif" alt="Play" onclick="togglePlay()">
+        <img id="play-image" class="play-image" src="https://files.catbox.moe/nj2ok5.png" alt="Play" onclick="togglePlay()">
     </div>
 
     <div class="spacer"></div>
@@ -120,10 +120,15 @@
     <script>
         function togglePlay() {
             var audio = document.getElementById('audio');
+            var image = document.getElementById('play-image');
+            
             if (audio.paused) {
                 audio.play();
+                image.src = "https://files.catbox.moe/xul1h6.gif";
+                image.style.display = "block";
             } else {
                 audio.pause();
+                image.src = "https://files.catbox.moe/nj2ok5.png";
             }
         }
 
