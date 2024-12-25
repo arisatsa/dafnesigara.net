@@ -56,8 +56,17 @@
 
         /* Resim (ortada) */
         .main-image {
-            width: 35%; /* Resmin genişliği sayfada %35 */
+            width: 35%; /* Varsayılan genişlik %35 */
             margin-top: 30px;
+        }
+
+        /* Mobil uyumluluk */
+        @media (max-width: 768px) {
+            .main-image {
+                width: 90%; /* Mobil cihazlarda genişlik %90 */
+                max-width: 400px; /* Maksimum genişlik 400px */
+                height: auto; /* Yükseklik otomatik */
+            }
         }
 
         /* Sayfanın alt kısmında boşluk için */
@@ -87,7 +96,7 @@
     <!-- Büyük resim -->
     <img src="https://files.catbox.moe/fkydmi.jpg" alt="Büyük Resim" class="main-image">
 
-    <!-- Sayfanın en altında boşluk bırak -->
+    <!-- Sayfanın alt kısmında boşluk bırak -->
     <div class="spacer"></div>
 
 </body>
