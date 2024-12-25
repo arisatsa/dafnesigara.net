@@ -17,7 +17,7 @@
             justify-content: flex-start;
             min-height: 100vh;
             text-align: center;
-            cursor: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Lighter.png/120px-Lighter.png') 16 16, auto; /* Çakmak cursor */
+            cursor: url('https://www.pngplay.com/wp-content/uploads/2/Lighter-Transparent-Free-PNG.png'), auto; /* Çakmak cursor */
         }
 
         /* Başlık (dafnesigara.net) */
@@ -56,7 +56,7 @@
 
         /* Resim (ortada) */
         .main-image {
-            width: 35%; /* Resmin genişliği sayfada %35 */
+            width: 35%; /* Varsayılan genişlik */
             margin-top: 30px;
         }
 
@@ -90,6 +90,21 @@
         /* Sayfanın alt kısmında boşluk için */
         .spacer {
             height: 50px; /* 50px yüksekliğinde boşluk */
+        }
+
+        /* Mobil cihazlar için medya sorgusu */
+        @media (max-width: 768px) {
+            .main-image {
+                width: 80%; /* Mobil cihazlarda genişlik %80 */
+            }
+
+            .subtitle {
+                font-size: 24px; /* Başlık yazısı küçültüldü */
+            }
+
+            .next-button a {
+                font-size: 18px; /* Buton yazısı küçültüldü */
+            }
         }
     </style>
 </head>
