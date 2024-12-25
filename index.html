@@ -112,6 +112,7 @@
 
     <div class="custom-player">
         <audio id="audio" src="https://files.catbox.moe/7jkdtb.mp3" type="audio/mpeg"></audio>
+        <audio id="extra-audio" src="https://files.catbox.moe/y9yin9.mp3" type="audio/mpeg"></audio>
         <img id="play-image" class="play-image" src="https://files.catbox.moe/nj2ok5.png" alt="Play" onclick="togglePlay()">
     </div>
 
@@ -120,16 +121,27 @@
     <script>
         function togglePlay() {
             var audio = document.getElementById('audio');
+            var extraAudio = document.getElementById('extra-audio');
             var image = document.getElementById('play-image');
             
             if (audio.paused) {
-                audio.play();
+                extraAudio.play();
                 image.src = "https://files.catbox.moe/xul1h6.gif";
                 image.style.display = "block";
+                
+                extraAudio.onended = function() {
+                    audio.play();
+                };
             } else {
                 audio.pause();
+                extraAudio.pause();
                 image.src = "https://files.catbox.moe/nj2ok5.png";
+                extraAudio.currentTime = 0;
             }
+
+            audio.onended = function() {
+                image.src = "https://files.catbox.moe/nj2ok5.png";
+            };
         }
 
         window.onload = function () {
