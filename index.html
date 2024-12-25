@@ -179,7 +179,11 @@
 
         function goRandom() {
             var randomPage = Math.floor(Math.random() * 4) + 1;
-            window.location.href = randomPage + ".html";
+            if (randomPage === 1) {
+                window.location.href = "index.html";
+            } else {
+                window.location.href = randomPage + ".html";
+            }
         }
 
         function dafnifyAction() {
