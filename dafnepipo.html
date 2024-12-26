@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>karanfilli sigara içiyor</title>
+    <link rel="icon" href="https://files.catbox.moe/rgvt9d.jpg" type="image/jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Amarante&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Amarante', cursive;
+            background-color: #FFF8E8;
+            background-image: url('https://files.catbox.moe/pzkv1m.png'), url('https://www.transparenttextures.com/patterns/old-paper.png');
+            background-size: cover, auto; /* Yeni resim tüm ekranı kaplar */
+            background-repeat: no-repeat, repeat;
+            background-position: center, top left;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            color: black;
+            font-size: 56px;
+            font-weight: bold;
+            margin-top: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Amarante', cursive;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1 span:first-child {
+            font-size: 112px; /* 2x size for "D" */
+            line-height: 1;
+            vertical-align: middle;
+        }
+
+        h1::before {
+            content: "The";
+            font-size: 24px;
+            font-family: 'Amarante', cursive;
+            position: absolute;
+            top: -20px; /* Adjusted to be closer to the main text */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .subtitle {
+            color: black;
+            font-weight: 300;
+            font-size: 32px;
+            margin-top: 10px;
+        }
+
+        .next-button a {
+            color: black;
+            text-align: center;
+            font-weight: 300;
+            font-size: 24px;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .main-image {
+            width: 45%;
+            margin-top: 20px;
+            object-fit: cover;
+        }
+
+        .custom-player {
+            background-color: transparent;
+            width: 100%;
+            max-width: 300px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .play-image {
+            width: auto;
+            height: auto;
+            max-width: 100px;
+            display: block;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .play-image:hover {
+            transform: scale(1.2);
+        }
+
+        .bottom-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .bottom-links a {
+            color: black;
+            font-weight: bold;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .spacer {
+            height: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .main-image {
+                width: 70%;
+            }
+
+            .subtitle {
+                font-size: 28px;
+            }
+
+            .next-button a {
+                font-size: 20px;
+            }
+
+            .bottom-links a {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1><span>D</span>afnepipo.net</h1>
+
+    <div class="subtitle">#1</div>
+
+    <div class="next-button">
+        <a href="2.html">gelesi</a>
+    </div>
+
+    <img src="https://files.catbox.moe/knyo1c.png" alt="Büyük Resim" class="main-image">
+
+    <div class="custom-player">
+        <audio id="audio" src="https://files.catbox.moe/7jkdtb.mp3" type="audio/mpeg"></audio>
+        <img id="play-image" class="play-image" src="https://files.catbox.moe/19d7pz.png" alt="Play" onclick="togglePlay()">
+    </div>
+
+    <div class="bottom-links">
+        <a href="#" id="dafnify-link">dafnify</a>
+        <a href="#" id="random-link">ihtiyari</a>
+    </div>
+
+    <div class="spacer"></div>
+
+    <script>
+        function togglePlay() {
+            var audio = document.getElementById('audio');
+
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+                audio.currentTime = 0;
+            }
+        }
+
+        document.getElementById('random-link').onclick = function() {
+            var pages = ['1.html', '2.html', '3.html', '4.html'];
+            var randomPage = pages[Math.floor(Math.random() * pages.length)];
+            window.location.href = randomPage;
+        };
+    </script>
+</body>
+</html>
