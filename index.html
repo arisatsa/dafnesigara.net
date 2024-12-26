@@ -183,7 +183,9 @@
         }
 
         function goDafnify() {
-            window.location.href = "dafnepipo.html";
+            var pages = ["dafnepipo.html", "d4fn3.html"];
+            var randomPage = pages[Math.floor(Math.random() * pages.length)];
+            window.location.href = randomPage;
         }
     </script>
 </body>
