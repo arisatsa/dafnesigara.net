@@ -110,7 +110,7 @@
             color: black;
             font-weight: bold;
             font-size: 24px;
-            text-decoration: none;
+            text-decoration: none; /* Altı çizgiyi kaldırır */
         }
 
         .spacer {
@@ -153,7 +153,7 @@
     </div>
 
     <div class="bottom-links">
-        <a href="#" id="dafnify-link">dafnify</a>
+        <a href="index.html" id="dafnify-link">dafnify</a>
         <a href="#" id="random-link">ihtiyari</a>
     </div>
 
@@ -172,10 +172,11 @@
         }
 
         document.getElementById('random-link').onclick = function() {
-            var pages = ['1.html', '2.html', '3.html', '4.html'];
+            var pages = ['index.html', '2.html', '3.html', '4.html', '5.html', '6.html'];
             var randomPage = pages[Math.floor(Math.random() * pages.length)];
             window.location.href = randomPage;
         };
     </script>
 </body>
 </html>
+
