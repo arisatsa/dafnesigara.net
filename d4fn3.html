@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>v4p3 1c1y0r</title>
+<link rel="icon" type="image/png" href="https://files.catbox.moe/uebj1i.png">
+<style>
+body{margin:0;font-family:'Doto',monospace;background-color:#001b00;color:#00ff00;display:flex;align-items:center;justify-content:center;height:100vh;overflow:hidden;}
+.container{text-align:center;border:2px dashed #00ff00;padding:20px;width:100%;max-width:320px;max-height:90vh;overflow-y:auto;box-sizing:border-box;}
+.container h1{font-size:2rem;margin-bottom:20px;color:#00ff00;word-wrap:break-word;white-space:nowrap;overflow:hidden;height:2.5rem;line-height:2rem;}
+.buttons{margin-top:10px;}
+.buttons a{display:block;background:#001b00;color:#00ff00;border:1px solid #00ff00;padding:10px 20px;cursor:pointer;font-family:inherit;text-decoration:none;margin:10px 0;}
+.buttons a:hover, .form input[type="button"]:hover, .form input[type="text"]:hover, .form input[type="password"]:hover{background:#00ff00;color:#001b00;}
+.form input[type="text"],.form input[type="password"],.form input[type="button"],.buttons a{background:#001b00;color:#00ff00;border:1px solid #00ff00;padding:10px;width:100%;margin-bottom:10px;font-family:inherit;box-sizing:border-box;}
+.image-container{margin-top:10px;display:none;}
+.image-container img{max-width:100%;height:auto;}
+@keyframes blink{0%{opacity:1;}50%{opacity:0;}100%{opacity:1;}}
+.cursor{opacity:1;animation:blink 1s linear infinite;}
+@media (max-width:480px){.container{max-width:90%;padding:10px;}.container h1{font-size:calc(100vw * 0.09);min-font-size:0.8rem;max-font-size:2rem;height:calc(100vw * 0.11);line-height:calc(100vw * 0.09);}}
+@media (max-width:300px){.container h1{font-size:0.8rem;height:1.2rem;line-height:1rem;}}
+</style>
+<script>
+function validateLogin() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const loginForm = document.querySelector('.form');
+    const buttons = document.querySelector('.buttons');
+    const imageContainer = document.querySelector('.image-container');
+    if (username === 'dafne' && password === 'sigara') {
+        loginForm.style.display = 'none';
+        buttons.style.display = 'block';
+        imageContainer.style.display = 'block';
+    } else {
+        alert('Incorrect username or password');
+    }
+}
+
+function goRandom() {
+    const pages = ['index.html', '2.html', '3.html', '4.html', '5.html', '6.html'];
+    const randomPage = pages[Math.floor(Math.random() * pages.length)];
+    window.location.href = randomPage;
+}
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const text = 'd4fn3s1g4r4.n3t';
+    const h1 = document.querySelector('h1');
+    let index = 0;
+    function type() {
+        if (index < text.length) {
+            h1.innerHTML = text.slice(0, index) + '<span class="cursor">|</span>';
+            let typingSpeed = Math.floor(Math.random() * 120) + 30;
+            if (index === text.length - 1 || text[index] === 't') {
+                typingSpeed = 20;
+            }
+            index++;
+            setTimeout(type, typingSpeed);
+        } else {
+            setTimeout(() => {
+                h1.innerHTML = text;
+            }, 500);
+        }
+    }
+    setTimeout(type, 500);
+    document.getElementById('username').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            validateLogin();
+        }
+    });
+    document.getElementById('password').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            validateLogin();
+        }
+    });
+});
+</script>
+</head>
+<body>
+<div class="container">
+<h1></h1>
+<div class="form">
+<input type="text" id="username" placeholder="USERNAME">
+<input type="password" id="password" placeholder="PASSWORD">
+<input type="button" value="LOGIN" onclick="validateLogin()">
+</div>
+<div class="buttons" style="display:none;">
+<a onclick="window.location.href='index.html'">_b4ck</a>
+<a onclick="window.location.href='2.html'">n3xt_</a>
+<a onclick="goRandom()">r4nd0m</a>
+<a onclick="window.location.href='dafnepipo.html'">d4fn1fy</a>
+</div>
+<div class="image-container">
+<img src="https://files.catbox.moe/mv4ufh.png" alt="Secret Image">
+</div>
+</div>
+</body>
+</html>
