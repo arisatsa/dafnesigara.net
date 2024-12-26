@@ -46,7 +46,7 @@
             margin-top: 20px;
         }
 
-        .navigation a, .navigation div {
+        .navigation a {
             color: orange;
             text-align: center;
             font-family: "PT Serif", serif;
@@ -54,7 +54,18 @@
             font-style: italic;
             font-size: 24px;
             text-decoration: underline;
+        }
+
+        .random-link {
+            color: white;
+            text-align: center;
+            font-family: "PT Serif", serif;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 24px;
+            text-decoration: underline;
             cursor: pointer;
+            margin-top: 20px;
         }
 
         .main-image {
@@ -83,11 +94,12 @@
 
     <div class="navigation">
         <a href="index.html">önceki</a>
-        <div onclick="goRandom()">rastgele</div>
         <a href="3.html">sonraki</a>
     </div>
 
     <img src="https://files.catbox.moe/kcbvzw.jpeg" alt="Büyük Resim" class="main-image">
+
+    <div class="random-link" onclick="goRandom()">rastgele</div>
 
     <div class="spacer"></div>
 
